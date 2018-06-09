@@ -3,7 +3,7 @@ import { Text, AsyncStorage } from 'react-native';
 import { Home } from './Home';
 import { Login } from './Login';
 
-class LandingPage extends Component {
+export class LandingPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,7 @@ class LandingPage extends Component {
     }
 
     componentWillMount() {
-        //this.props.loginIfo = await AsyncStorage.getItem('isLoggedIn');
+        
         this.props.loginIfo = this.checkLoginStatus();
         this.setState({ isReady: true });
 
@@ -32,5 +32,3 @@ class LandingPage extends Component {
         return <Expo.AppLoading />;
     }
 }
-
-export default LandingPage;

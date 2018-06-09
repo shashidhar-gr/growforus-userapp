@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { users } from '../config/data'
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
-export default class CardImageExample extends Component {
+
+export class FarmList extends Component {
 
     static navigationOptions = {
         title: 'Farm List',
@@ -17,7 +18,7 @@ export default class CardImageExample extends Component {
             <Container>
                 <Content>
                     {users.map((user) => (
-                        <Card>
+                        <Card key = { user.login.username }>
                             <CardItem button onPress = { () => this.onLearnMore(user) }>
                                 <Left>
                                     <Thumbnail source={{ uri: user.picture.thumbnail }} />
@@ -50,4 +51,5 @@ export default class CardImageExample extends Component {
             </Container>
         );
     }
+
 }
