@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, CheckBox, View, ListItem } from 'native-base';
+import { Facilities } from './Facilities';
 
 export class FarmDetails extends Component {
 
@@ -15,10 +16,10 @@ export class FarmDetails extends Component {
         return (
             <Container>
                 <Content>
-                    <Card style={{ flex: 0 }}>
+                    <Card>
                         <CardItem>
                             <Body>
-                                <Image source={{ uri: farmPictureMain }} style={{ height: 200, width: 400, flex: 1 }} />
+                                <Image source={{ uri: farmPictureMain }} style={{ height: 200, width: 320 }} />
                                 <Text style={{ fontWeight: 'bold', fontSize: 20 }}>
                                     {farmLandName}
                                 </Text>
@@ -32,9 +33,14 @@ export class FarmDetails extends Component {
                                 </Text>
                                 <Text />
                                 <Text />
+                            </Body>
+                        </CardItem>
+                        <CardItem>
+                            <Body>
                                 <Text>
                                     Facilities includes
                                 </Text>
+                                <Facilities />
                             </Body>
                         </CardItem>
                     </Card>

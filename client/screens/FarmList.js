@@ -29,7 +29,7 @@ export class FarmList extends Component {
                                 </Left>
                             </CardItem>
                             <CardItem cardBody button onPress = { () => this.onLearnMore(user) }>
-                                <Image source={{ uri: user.farmPictureMain }} style={{ height: 200, width: null, flex: 1 }} />
+                                <Image source={{ uri: user.farmPictureMain }} style={{ height: 200, width: 300, flex: 1 }} />
                             </CardItem>
                             <CardItem>
                                 <Left>
